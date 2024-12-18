@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 100vh;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#exerciseForm {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#exerciseForm input,
+#exerciseForm select {
+    padding: 12px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+
+#exerciseForm button {
+    padding: 12px;
+    margin: 5px 0;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+#exerciseForm button:hover {
+    background-color: #0051EF;
+}
+
+.exercise-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exercise-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exercise-info {
+    flex-grow: 1;
+}
+
+.exercise-info h3 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.exercise-info p {
+    margin: 5px 0;
+    color: #cccccc;
+}
+
+.exercise-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.exercise-actions button {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exercise-actions button:hover {
+    background-color: #0051EF;
+}
+
+.exercise-actions button:nth-child(2) {
+    background-color: #FF3B30;
+}
+
+.exercise-actions button:nth-child(2):hover {
+    background-color: #C70000;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    #exerciseForm {
+        padding: 15px;
+    }
+
+    #exerciseForm input,
+    #exerciseForm select {
+        font-size: 14px;
+    }
+
+    .exercise-card {
+        flex: 1 1 100%;
+    }
+
+    .exercise-actions button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+.exercise-group {
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.exercise-group h2 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    width: 80%; 
+    max-width: 500px; 
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content h2 {
+    color: #ffffff;
+}
+
+.modal-content input {
+    padding: 12px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 5px; 
+    font-size: 16px;
+}
+
+.modal-content button {
+    padding: 12px;
+    margin: 5px 0;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    background-color: #0051EF;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#goBackBtn {
+    position: absolute; /* Positioning to top left */
+    top: 0; /* Distance from the top */
+    left: 0; /* Distance from the left */
+    color: #007AFF; /* Text color */
+    background: none;
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding inside the button */
+    font-size: 19px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* Ensure it's on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Notepad</title>
+    <link rel="stylesheet" href="/1/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Go Back Link styled as a button -->
+        <a href="/index.html" class="btn" id="goBackBtn">Go Back</a>
+
+        <h1>Gym Notepad</h1>
+
+        <form id="exerciseForm">
+            <input type="text" placeholder="Exercise Name" required>
+            <input type="number" placeholder="Reps" required>
+            <input type="number" placeholder="Weight (kg)" required>
+            <select id="groupSelect" required>
+                <option value="" disabled selected>Select Group</option>
+                <option value="Group A">Group A</option>
+                <option value="Group B">Group B</option>
+            </select>
+            <button type="submit">Add Exercise</button>
+        </form>
+
+        <div class="exercise-list" id="exerciseList"></div>
+    </div>
+
+    <!-- Modal for Editing Exercise -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Exercise</h2>
+            <form id="editForm">
+                <input type="text" id="modalExerciseName" placeholder="Exercise Name" required>
+                <input type="number" id="modalReps" placeholder="Reps" required>
+                <input type="number" id="modalWeight" placeholder="Weight (kg)" required>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
