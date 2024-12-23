@@ -56,38 +56,24 @@ nav {
     margin: 20px 0; /* Margin around the nav */
 }
 
-nav ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0;
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-nav ul li {
-    margin: 15px 0; /* Space between links */
-}
-
-nav ul li a {
-    text-decoration: none; /* Remove underline */
-    color: #007AFF; /* iOS blue */
-    font-weight: bold; /* Bold link text */
-    font-size: 18px; /* Font size for links */
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Underline effect on hover */
-}
-
-/* Button styling */
-button {
-    background-color: #007AFF; /* Blue button */
-    color: #ffffff; /* White text */
-    border: none; /* No border */
-    border-radius: 10px; /* Rounded corners for buttons */
-    padding: 10px 15px; /* Padding for buttons */
-    font-size: 16px; /* Font size for buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 10px; /* Space above buttons */
-}
-
-button:hover {
-    background-color: #0051a8; /* Darker blue on hover */
+.link {
+    width: 200px;
+    height: 44px;
+    background: #007AFF;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
